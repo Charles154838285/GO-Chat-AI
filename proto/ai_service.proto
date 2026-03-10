@@ -1,0 +1,85 @@
+syntax = "proto3";
+
+// ai_service.proto — KamaChat AI 微服务接口定义
+//
+// 本文件定义了独立部署的 AI 服务所暴露的 gRPC 接口。
+// 主通讯服务（kama_chat_server）通过该接口调用 AI 能力，
+// 实现 AI 模块与主链路的彻底解耦，遵循微服务架构原则。
+//
+// 生成 Go 代码（在 ai-service/ 目录下执行）：
+//   protoc --go_out=. --go_opt=paths=source_relative \
+//          --go-grpc_out=. --go-grpc_opt=paths=source_relative \
+//          proto/ai_service.proto
+
+package ai;
+
+option go_package = "kama_chat_server/ai-service/proto/pb;ai_pb";
+
+// ────────────────────────────────────────────
+// AI Service 接口定义
+// ────────────────────────────────────────────
+
+service AIService {
+  // Chat 同步问答：单次调用返回完整回复
+  rpc Chat (ChatRequest) returns (ChatResponse);
+
+  // StreamChat 流式问答：逐 Token 推送，适用于打字效果展示
+  rpc StreamChat (ChatRequest) returns (stream StreamChunk);
+
+  // ClearContext 清除指定用户的对话历史上下文
+  rpc ClearContext (ClearContextRequest) returns (ClearContextResponse);
+
+  // GetContextInfo 查询指定用户当前保留的历史轮数
+  rpc GetContextInfo (GetContextInfoRequest) returns (GetContextInfoResponse);
+
+  // HealthCheck 健康检查
+  rpc HealthCheck (HealthCheckRequest) returns (HealthCheckResponse);
+}
+
+// ────────────────────────────────────────────
+// 请求 / 响应 消息定义
+// ────────────────────────────────────────────
+
+message ChatRequest {
+  string user_id    = 1; // 用户 UUID，用于关联对话上下文
+  string session_id = 2; // 会话 ID（预留，供后续扩展）
+  string content    = 3; // 用户消息内容（已移除 @ai 前缀）
+}
+
+message ChatResponse {
+  string content = 1; // AI 回复文本
+  int32  code    = 2; // 0=成功, 非0=错误码
+  string message = 3; // 错误描述（成功时为空）
+}
+
+message StreamChunk {
+  string content = 1; // 当前 Token 片段
+  bool   done    = 2; // true 表示流式响应结束
+  int32  code    = 3; // 错误码（流结束时携带）
+}
+
+message ClearContextRequest {
+  string user_id = 1;
+}
+
+message ClearContextResponse {
+  bool   success = 1;
+  string message = 2;
+}
+
+message GetContextInfoRequest {
+  string user_id = 1;
+}
+
+message GetContextInfoResponse {
+  string user_id    = 1;
+  int32  turn_count = 2; // 当前保留的对话轮数
+  int32  limit      = 3; // 最大允许轮数上限
+}
+
+message HealthCheckRequest {}
+
+message HealthCheckResponse {
+  string status  = 1; // "ok" | "degraded" | "down"
+  string version = 2;
+}
