@@ -83,21 +83,6 @@ sequenceDiagram
   WS-->>Client: push AI message
 ```
 
-### 3) Agent 编排内部模块
-
-```mermaid
-flowchart TD
-  IN[@ai message] --> R[Role Router]
-  R --> S[Session Manager (Redis State Machine)]
-  S --> SC{Semantic Cache Hit?}
-  SC -- Yes --> OUT[Fast Response]
-  SC -- No --> F[Function Calling]
-  F --> RG[RAG Hybrid Retrieval]
-  RG --> LLM[LLM Inference]
-  LLM --> MEM[Update Memory + Context]
-  MEM --> OUT
-```
-
 ## 核心技术设计
 
 ### 通讯层
