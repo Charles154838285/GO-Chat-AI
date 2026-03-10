@@ -1,0 +1,125 @@
+{"level":"fatal","ts":"2026-01-14T08:39:46.299Z","msg":"Error 1049 (42000): Unknown database 'your app name'","func":"dao.init.0","file":"/root/gochat/KamaChat/internal/dao/gorm.go","line":26}
+{"level":"fatal","ts":"2026-01-14T08:40:43.419Z","msg":"Error 1049 (42000): Unknown database 'your app name'","func":"dao.init.0","file":"/root/gochat/KamaChat/internal/dao/gorm.go","line":26}
+{"level":"info","ts":"2026-01-14T08:46:42.146Z","msg":"AI服务初始化成功, 提供商: doubao, 模型: Doubao-Seed-1.8","func":"ai.(*AIService).Initialize","file":"/root/gochat/KamaChat/internal/service/ai/ai_service.go","line":99}
+{"level":"info","ts":"2026-01-14T08:46:42.182Z","msg":"开始初始化AI服务...","func":"main.main","file":"/root/gochat/KamaChat/cmd/kama_chat_server/main.go","line":24}
+{"level":"info","ts":"2026-01-14T08:46:42.185Z","msg":"AI虚拟用户已存在，跳过初始化","func":"ai.InitAIUser","file":"/root/gochat/KamaChat/internal/service/ai/ai_user.go","line":26}
+{"level":"info","ts":"2026-01-14T08:46:42.185Z","msg":"✅ AI服务已启用并初始化成功","func":"main.main","file":"/root/gochat/KamaChat/cmd/kama_chat_server/main.go","line":28}
+{"level":"info","ts":"2026-01-14T08:47:50.376Z","msg":"ws write goroutine start","func":"chat.(*Client).Write","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":95}
+{"level":"info","ts":"2026-01-14T08:47:50.378Z","msg":"ws连接成功","func":"chat.NewClientInit","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":132}
+{"level":"debug","ts":"2026-01-14T08:47:50.378Z","msg":"欢迎来到kama聊天服务器，亲爱的用户U2025123181073034246\n","func":"chat.(*Server).Start","file":"/root/gochat/KamaChat/internal/service/chat/server.go","line":79}
+{"level":"info","ts":"2026-01-14T08:47:50.379Z","msg":"ws read goroutine start","func":"chat.(*Client).Read","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":49}
+{"level":"info","ts":"2026-01-14T08:47:52.278Z","msg":"没有找到相关前缀key","func":"redis.GetKeyWithPrefixNilIsErr","file":"/root/gochat/KamaChat/internal/service/redis/redis_service.go","line":73}
+{"level":"info","ts":"2026-01-14T08:47:52.284Z","msg":"redis: nil","func":"gorm.(*messageService).GetMessageList","file":"/root/gochat/KamaChat/internal/service/gorm/message_service.go","line":31}
+{"level":"info","ts":"2026-01-14T08:47:52.285Z","msg":"U2026011444619072708 U2026011444619072708","func":"gorm.(*messageService).GetMessageList","file":"/root/gochat/KamaChat/internal/service/gorm/message_service.go","line":32}
+{"level":"info","ts":"2026-01-14T08:47:59.460Z","msg":"检测到AI消息: user=U2025123181073034246, content=@ai 今天天气怎么样\n","func":"chat.(*Server).Start","file":"/root/gochat/KamaChat/internal/service/chat/server.go","line":109}
+{"level":"error","ts":"2026-01-14T08:47:59.742Z","msg":"AI调用失败: unexpected end of JSON input","func":"ai.(*AIService).Chat","file":"/root/gochat/KamaChat/internal/service/ai/ai_service.go","line":120}
+{"level":"error","ts":"2026-01-14T08:47:59.742Z","msg":"AI调用失败, ret=-1, response=AI暂时无法回复，请稍后再试","func":"ai.(*MessageHandler).HandleAIMessage","file":"/root/gochat/KamaChat/internal/service/ai/message_handler.go","line":74}
+{"level":"info","ts":"2026-01-14T08:47:59.746Z","msg":"AI回复成功: user=U2025123181073034246, response=抱歉，我现在有点忙，请稍后再试～","func":"ai.(*MessageHandler).HandleAIMessage","file":"/root/gochat/KamaChat/internal/service/ai/message_handler.go","line":125}
+{"level":"info","ts":"2026-01-14T08:47:59.746Z","msg":"AI消息已发送给用户: U2025123181073034246","func":"chat.(*Server).Start.func2","file":"/root/gochat/KamaChat/internal/service/chat/server.go","line":160}
+{"level":"info","ts":"2026-01-14T08:49:49.325Z","msg":"检测到AI消息: user=U2025123181073034246, content= @ai 什么是分布式系统？\n","func":"chat.(*Server).Start","file":"/root/gochat/KamaChat/internal/service/chat/server.go","line":109}
+{"level":"error","ts":"2026-01-14T08:49:49.462Z","msg":"AI调用失败: unexpected end of JSON input","func":"ai.(*AIService).Chat","file":"/root/gochat/KamaChat/internal/service/ai/ai_service.go","line":120}
+{"level":"error","ts":"2026-01-14T08:49:49.463Z","msg":"AI调用失败, ret=-1, response=AI暂时无法回复，请稍后再试","func":"ai.(*MessageHandler).HandleAIMessage","file":"/root/gochat/KamaChat/internal/service/ai/message_handler.go","line":74}
+{"level":"info","ts":"2026-01-14T08:49:49.471Z","msg":"AI回复成功: user=U2025123181073034246, response=抱歉，我现在有点忙，请稍后再试～","func":"ai.(*MessageHandler).HandleAIMessage","file":"/root/gochat/KamaChat/internal/service/ai/message_handler.go","line":125}
+{"level":"info","ts":"2026-01-14T08:49:49.472Z","msg":"AI消息已发送给用户: U2025123181073034246","func":"chat.(*Server).Start.func2","file":"/root/gochat/KamaChat/internal/service/chat/server.go","line":160}
+{"level":"info","ts":"2026-01-14T08:51:09.775Z","msg":"检测到AI消息: user=U2025123181073034246, content=@ai 什么是分布式系统","func":"chat.(*Server).Start","file":"/root/gochat/KamaChat/internal/service/chat/server.go","line":109}
+{"level":"error","ts":"2026-01-14T08:51:09.826Z","msg":"AI调用失败: unexpected end of JSON input","func":"ai.(*AIService).Chat","file":"/root/gochat/KamaChat/internal/service/ai/ai_service.go","line":120}
+{"level":"error","ts":"2026-01-14T08:51:09.827Z","msg":"AI调用失败, ret=-1, response=AI暂时无法回复，请稍后再试","func":"ai.(*MessageHandler).HandleAIMessage","file":"/root/gochat/KamaChat/internal/service/ai/message_handler.go","line":74}
+{"level":"info","ts":"2026-01-14T08:51:09.837Z","msg":"AI回复成功: user=U2025123181073034246, response=抱歉，我现在有点忙，请稍后再试～","func":"ai.(*MessageHandler).HandleAIMessage","file":"/root/gochat/KamaChat/internal/service/ai/message_handler.go","line":125}
+{"level":"info","ts":"2026-01-14T08:51:09.838Z","msg":"AI消息已发送给用户: U2025123181073034246","func":"chat.(*Server).Start.func2","file":"/root/gochat/KamaChat/internal/service/chat/server.go","line":160}
+{"level":"info","ts":"2026-01-14T08:54:12.686Z","msg":"关闭服务器...","func":"main.main","file":"/root/gochat/KamaChat/cmd/kama_chat_server/main.go","line":74}
+{"level":"fatal","ts":"2026-01-14T08:55:10.425Z","msg":"Error 1049 (42000): Unknown database 'your app name'","func":"dao.init.0","file":"/root/gochat/KamaChat/internal/dao/gorm.go","line":26}
+{"level":"info","ts":"2026-01-14T08:58:58.812Z","msg":"AI服务初始化成功, 提供商: doubao, 模型: Doubao-Seed-1.8","func":"ai.(*AIService).Initialize","file":"/root/gochat/KamaChat/internal/service/ai/ai_service.go","line":99}
+{"level":"info","ts":"2026-01-14T08:58:58.846Z","msg":"开始初始化AI服务...","func":"main.main","file":"/root/gochat/KamaChat/cmd/kama_chat_server/main.go","line":24}
+{"level":"info","ts":"2026-01-14T08:58:58.848Z","msg":"AI虚拟用户已存在，跳过初始化","func":"ai.InitAIUser","file":"/root/gochat/KamaChat/internal/service/ai/ai_user.go","line":26}
+{"level":"info","ts":"2026-01-14T08:58:58.849Z","msg":"✅ AI服务已启用并初始化成功","func":"main.main","file":"/root/gochat/KamaChat/cmd/kama_chat_server/main.go","line":28}
+{"level":"info","ts":"2026-01-14T08:59:12.454Z","msg":"ws连接成功","func":"chat.NewClientInit","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":132}
+{"level":"info","ts":"2026-01-14T08:59:12.455Z","msg":"ws write goroutine start","func":"chat.(*Client).Write","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":95}
+{"level":"info","ts":"2026-01-14T08:59:12.455Z","msg":"ws read goroutine start","func":"chat.(*Client).Read","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":49}
+{"level":"debug","ts":"2026-01-14T08:59:12.455Z","msg":"欢迎来到kama聊天服务器，亲爱的用户U2025123181073034246\n","func":"chat.(*Server).Start","file":"/root/gochat/KamaChat/internal/service/chat/server.go","line":79}
+{"level":"info","ts":"2026-01-14T08:59:12.463Z","msg":"U2025123181073034246","func":"gorm.(*userInfoService).GetUserInfo","file":"/root/gochat/KamaChat/internal/service/gorm/user_info_service.go","line":443}
+{"level":"info","ts":"2026-01-14T08:59:12.466Z","msg":"redis: nil","func":"gorm.(*userInfoService).GetUserInfo","file":"/root/gochat/KamaChat/internal/service/gorm/user_info_service.go","line":447}
+{"level":"info","ts":"2026-01-14T08:59:14.727Z","msg":"ws连接成功","func":"chat.NewClientInit","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":132}
+{"level":"debug","ts":"2026-01-14T08:59:14.727Z","msg":"欢迎来到kama聊天服务器，亲爱的用户U2025123181073034246\n","func":"chat.(*Server).Start","file":"/root/gochat/KamaChat/internal/service/chat/server.go","line":79}
+{"level":"info","ts":"2026-01-14T08:59:14.727Z","msg":"ws read goroutine start","func":"chat.(*Client).Read","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":49}
+{"level":"info","ts":"2026-01-14T08:59:14.727Z","msg":"ws write goroutine start","func":"chat.(*Client).Write","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":95}
+{"level":"info","ts":"2026-01-14T08:59:16.737Z","msg":"没有找到相关前缀key","func":"redis.GetKeyWithPrefixNilIsErr","file":"/root/gochat/KamaChat/internal/service/redis/redis_service.go","line":73}
+{"level":"info","ts":"2026-01-14T08:59:16.742Z","msg":"redis: nil","func":"gorm.(*messageService).GetMessageList","file":"/root/gochat/KamaChat/internal/service/gorm/message_service.go","line":31}
+{"level":"info","ts":"2026-01-14T08:59:16.742Z","msg":"U2026011444619072708 U2026011444619072708","func":"gorm.(*messageService).GetMessageList","file":"/root/gochat/KamaChat/internal/service/gorm/message_service.go","line":32}
+{"level":"info","ts":"2026-01-14T08:59:21.728Z","msg":"检测到AI消息: user=U2025123181073034246, content=@ai 今天天气怎么样","func":"chat.(*Server).Start","file":"/root/gochat/KamaChat/internal/service/chat/server.go","line":109}
+{"level":"error","ts":"2026-01-14T08:59:22.009Z","msg":"AI调用失败: LLM响应为空，status=404","func":"ai.(*AIService).Chat","file":"/root/gochat/KamaChat/internal/service/ai/ai_service.go","line":120}
+{"level":"error","ts":"2026-01-14T08:59:22.010Z","msg":"AI调用失败, ret=-1, response=AI暂时无法回复，请稍后再试","func":"ai.(*MessageHandler).HandleAIMessage","file":"/root/gochat/KamaChat/internal/service/ai/message_handler.go","line":74}
+{"level":"info","ts":"2026-01-14T08:59:22.015Z","msg":"AI回复成功: user=U2025123181073034246, response=抱歉，我现在有点忙，请稍后再试～","func":"ai.(*MessageHandler).HandleAIMessage","file":"/root/gochat/KamaChat/internal/service/ai/message_handler.go","line":125}
+{"level":"info","ts":"2026-01-14T08:59:22.015Z","msg":"AI消息已发送给用户: U2025123181073034246","func":"chat.(*Server).Start.func2","file":"/root/gochat/KamaChat/internal/service/chat/server.go","line":160}
+{"level":"info","ts":"2026-01-14T09:01:39.802Z","msg":"关闭服务器...","func":"main.main","file":"/root/gochat/KamaChat/cmd/kama_chat_server/main.go","line":74}
+{"level":"info","ts":"2026-01-14T09:02:34.552Z","msg":"AI服务初始化成功, 提供商: doubao, 模型: doubao-seed-1-8-251228","func":"ai.(*AIService).Initialize","file":"/root/gochat/KamaChat/internal/service/ai/ai_service.go","line":99}
+{"level":"info","ts":"2026-01-14T09:02:34.584Z","msg":"开始初始化AI服务...","func":"main.main","file":"/root/gochat/KamaChat/cmd/kama_chat_server/main.go","line":24}
+{"level":"info","ts":"2026-01-14T09:02:34.587Z","msg":"AI虚拟用户已存在，跳过初始化","func":"ai.InitAIUser","file":"/root/gochat/KamaChat/internal/service/ai/ai_user.go","line":26}
+{"level":"info","ts":"2026-01-14T09:02:34.587Z","msg":"✅ AI服务已启用并初始化成功","func":"main.main","file":"/root/gochat/KamaChat/cmd/kama_chat_server/main.go","line":28}
+{"level":"info","ts":"2026-01-14T09:02:41.881Z","msg":"ws连接成功","func":"chat.NewClientInit","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":132}
+{"level":"debug","ts":"2026-01-14T09:02:41.882Z","msg":"欢迎来到kama聊天服务器，亲爱的用户U2025123181073034246\n","func":"chat.(*Server).Start","file":"/root/gochat/KamaChat/internal/service/chat/server.go","line":79}
+{"level":"info","ts":"2026-01-14T09:02:41.882Z","msg":"ws write goroutine start","func":"chat.(*Client).Write","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":95}
+{"level":"info","ts":"2026-01-14T09:02:41.882Z","msg":"ws read goroutine start","func":"chat.(*Client).Read","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":49}
+{"level":"info","ts":"2026-01-14T09:02:41.886Z","msg":"U2025123181073034246","func":"gorm.(*userInfoService).GetUserInfo","file":"/root/gochat/KamaChat/internal/service/gorm/user_info_service.go","line":443}
+{"level":"info","ts":"2026-01-14T09:02:41.889Z","msg":"redis: nil","func":"gorm.(*userInfoService).GetUserInfo","file":"/root/gochat/KamaChat/internal/service/gorm/user_info_service.go","line":447}
+{"level":"info","ts":"2026-01-14T09:02:44.352Z","msg":"ws连接成功","func":"chat.NewClientInit","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":132}
+{"level":"info","ts":"2026-01-14T09:02:44.353Z","msg":"ws read goroutine start","func":"chat.(*Client).Read","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":49}
+{"level":"info","ts":"2026-01-14T09:02:44.353Z","msg":"ws write goroutine start","func":"chat.(*Client).Write","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":95}
+{"level":"debug","ts":"2026-01-14T09:02:44.353Z","msg":"欢迎来到kama聊天服务器，亲爱的用户U2025123181073034246\n","func":"chat.(*Server).Start","file":"/root/gochat/KamaChat/internal/service/chat/server.go","line":79}
+{"level":"info","ts":"2026-01-14T09:02:45.863Z","msg":"没有找到相关前缀key","func":"redis.GetKeyWithPrefixNilIsErr","file":"/root/gochat/KamaChat/internal/service/redis/redis_service.go","line":73}
+{"level":"info","ts":"2026-01-14T09:02:45.870Z","msg":"redis: nil","func":"gorm.(*messageService).GetMessageList","file":"/root/gochat/KamaChat/internal/service/gorm/message_service.go","line":31}
+{"level":"info","ts":"2026-01-14T09:02:45.870Z","msg":"U2026011444619072708 U2026011444619072708","func":"gorm.(*messageService).GetMessageList","file":"/root/gochat/KamaChat/internal/service/gorm/message_service.go","line":32}
+{"level":"info","ts":"2026-01-14T09:02:50.230Z","msg":"检测到AI消息: user=U2025123181073034246, content=@ai 今天天气怎么样","func":"chat.(*Server).Start","file":"/root/gochat/KamaChat/internal/service/chat/server.go","line":109}
+{"level":"error","ts":"2026-01-14T09:02:50.510Z","msg":"AI调用失败: LLM响应为空，status=404","func":"ai.(*AIService).Chat","file":"/root/gochat/KamaChat/internal/service/ai/ai_service.go","line":120}
+{"level":"error","ts":"2026-01-14T09:02:50.511Z","msg":"AI调用失败, ret=-1, response=AI暂时无法回复，请稍后再试","func":"ai.(*MessageHandler).HandleAIMessage","file":"/root/gochat/KamaChat/internal/service/ai/message_handler.go","line":74}
+{"level":"info","ts":"2026-01-14T09:02:50.515Z","msg":"AI回复成功: user=U2025123181073034246, response=抱歉，我现在有点忙，请稍后再试～","func":"ai.(*MessageHandler).HandleAIMessage","file":"/root/gochat/KamaChat/internal/service/ai/message_handler.go","line":125}
+{"level":"info","ts":"2026-01-14T09:02:50.516Z","msg":"AI消息已发送给用户: U2025123181073034246","func":"chat.(*Server).Start.func2","file":"/root/gochat/KamaChat/internal/service/chat/server.go","line":160}
+{"level":"info","ts":"2026-01-14T09:06:31.829Z","msg":"关闭服务器...","func":"main.main","file":"/root/gochat/KamaChat/cmd/kama_chat_server/main.go","line":74}
+{"level":"info","ts":"2026-01-14T09:08:15.085Z","msg":"AI服务初始化成功, 提供商: doubao, 模型: doubao-seed-1-8-251228","func":"ai.(*AIService).Initialize","file":"/root/gochat/KamaChat/internal/service/ai/ai_service.go","line":99}
+{"level":"info","ts":"2026-01-14T09:08:15.120Z","msg":"开始初始化AI服务...","func":"main.main","file":"/root/gochat/KamaChat/cmd/kama_chat_server/main.go","line":24}
+{"level":"info","ts":"2026-01-14T09:08:15.123Z","msg":"AI虚拟用户已存在，跳过初始化","func":"ai.InitAIUser","file":"/root/gochat/KamaChat/internal/service/ai/ai_user.go","line":26}
+{"level":"info","ts":"2026-01-14T09:08:15.123Z","msg":"✅ AI服务已启用并初始化成功","func":"main.main","file":"/root/gochat/KamaChat/cmd/kama_chat_server/main.go","line":28}
+{"level":"info","ts":"2026-01-14T09:08:26.892Z","msg":"ws连接成功","func":"chat.NewClientInit","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":132}
+{"level":"info","ts":"2026-01-14T09:08:26.893Z","msg":"ws write goroutine start","func":"chat.(*Client).Write","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":95}
+{"level":"info","ts":"2026-01-14T09:08:26.893Z","msg":"ws read goroutine start","func":"chat.(*Client).Read","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":49}
+{"level":"debug","ts":"2026-01-14T09:08:26.893Z","msg":"欢迎来到kama聊天服务器，亲爱的用户U2025123181073034246\n","func":"chat.(*Server).Start","file":"/root/gochat/KamaChat/internal/service/chat/server.go","line":79}
+{"level":"error","ts":"2026-01-14T09:08:30.882Z","msg":"websocket: close 1001 (going away)","func":"chat.(*Client).Read","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":54}
+{"level":"info","ts":"2026-01-14T09:08:30.998Z","msg":"ws连接成功","func":"chat.NewClientInit","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":132}
+{"level":"info","ts":"2026-01-14T09:08:30.998Z","msg":"ws read goroutine start","func":"chat.(*Client).Read","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":49}
+{"level":"info","ts":"2026-01-14T09:08:30.998Z","msg":"ws write goroutine start","func":"chat.(*Client).Write","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":95}
+{"level":"debug","ts":"2026-01-14T09:08:30.998Z","msg":"欢迎来到kama聊天服务器，亲爱的用户U2025123181073034246\n","func":"chat.(*Server).Start","file":"/root/gochat/KamaChat/internal/service/chat/server.go","line":79}
+{"level":"info","ts":"2026-01-14T09:08:31.024Z","msg":"U2025123181073034246","func":"gorm.(*userInfoService).GetUserInfo","file":"/root/gochat/KamaChat/internal/service/gorm/user_info_service.go","line":443}
+{"level":"info","ts":"2026-01-14T09:08:31.031Z","msg":"redis: nil","func":"gorm.(*userInfoService).GetUserInfo","file":"/root/gochat/KamaChat/internal/service/gorm/user_info_service.go","line":447}
+{"level":"info","ts":"2026-01-14T09:08:33.530Z","msg":"ws连接成功","func":"chat.NewClientInit","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":132}
+{"level":"debug","ts":"2026-01-14T09:08:33.531Z","msg":"欢迎来到kama聊天服务器，亲爱的用户U2025123181073034246\n","func":"chat.(*Server).Start","file":"/root/gochat/KamaChat/internal/service/chat/server.go","line":79}
+{"level":"info","ts":"2026-01-14T09:08:33.531Z","msg":"ws read goroutine start","func":"chat.(*Client).Read","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":49}
+{"level":"info","ts":"2026-01-14T09:08:33.531Z","msg":"ws write goroutine start","func":"chat.(*Client).Write","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":95}
+{"level":"info","ts":"2026-01-14T09:08:34.916Z","msg":"没有找到相关前缀key","func":"redis.GetKeyWithPrefixNilIsErr","file":"/root/gochat/KamaChat/internal/service/redis/redis_service.go","line":73}
+{"level":"info","ts":"2026-01-14T09:08:34.921Z","msg":"redis: nil","func":"gorm.(*messageService).GetMessageList","file":"/root/gochat/KamaChat/internal/service/gorm/message_service.go","line":31}
+{"level":"info","ts":"2026-01-14T09:08:34.922Z","msg":"U2026011444619072708 U2026011444619072708","func":"gorm.(*messageService).GetMessageList","file":"/root/gochat/KamaChat/internal/service/gorm/message_service.go","line":32}
+{"level":"info","ts":"2026-01-14T09:08:38.588Z","msg":"检测到AI消息: user=U2025123181073034246, content=@ai 今天天气怎么样","func":"chat.(*Server).Start","file":"/root/gochat/KamaChat/internal/service/chat/server.go","line":109}
+{"level":"error","ts":"2026-01-14T09:08:38.762Z","msg":"AI调用失败: LLM响应为空，status=404","func":"ai.(*AIService).Chat","file":"/root/gochat/KamaChat/internal/service/ai/ai_service.go","line":120}
+{"level":"error","ts":"2026-01-14T09:08:38.762Z","msg":"AI调用失败, ret=-1, response=AI暂时无法回复，请稍后再试","func":"ai.(*MessageHandler).HandleAIMessage","file":"/root/gochat/KamaChat/internal/service/ai/message_handler.go","line":74}
+{"level":"info","ts":"2026-01-14T09:08:38.766Z","msg":"AI回复成功: user=U2025123181073034246, response=抱歉，我现在有点忙，请稍后再试～","func":"ai.(*MessageHandler).HandleAIMessage","file":"/root/gochat/KamaChat/internal/service/ai/message_handler.go","line":125}
+{"level":"info","ts":"2026-01-14T09:08:38.766Z","msg":"AI消息已发送给用户: U2025123181073034246","func":"chat.(*Server).Start.func2","file":"/root/gochat/KamaChat/internal/service/chat/server.go","line":160}
+{"level":"error","ts":"2026-01-14T09:09:38.487Z","msg":"websocket: close 1006 (abnormal closure): unexpected EOF","func":"chat.(*Client).Read","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":54}
+{"level":"error","ts":"2026-01-14T09:09:38.488Z","msg":"websocket: close 1006 (abnormal closure): unexpected EOF","func":"chat.(*Client).Read","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":54}
+{"level":"info","ts":"2026-01-14T09:09:39.486Z","msg":"ws连接成功","func":"chat.NewClientInit","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":132}
+{"level":"debug","ts":"2026-01-14T09:09:39.487Z","msg":"欢迎来到kama聊天服务器，亲爱的用户U2025123181073034246\n","func":"chat.(*Server).Start","file":"/root/gochat/KamaChat/internal/service/chat/server.go","line":79}
+{"level":"info","ts":"2026-01-14T09:09:39.487Z","msg":"ws read goroutine start","func":"chat.(*Client).Read","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":49}
+{"level":"info","ts":"2026-01-14T09:09:39.488Z","msg":"ws write goroutine start","func":"chat.(*Client).Write","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":95}
+{"level":"error","ts":"2026-01-14T09:09:55.589Z","msg":"websocket: close 1006 (abnormal closure): unexpected EOF","func":"chat.(*Client).Read","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":54}
+{"level":"debug","ts":"2026-01-14T09:09:56.602Z","msg":"欢迎来到kama聊天服务器，亲爱的用户U2025123181073034246\n","func":"chat.(*Server).Start","file":"/root/gochat/KamaChat/internal/service/chat/server.go","line":79}
+{"level":"info","ts":"2026-01-14T09:09:56.602Z","msg":"ws连接成功","func":"chat.NewClientInit","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":132}
+{"level":"info","ts":"2026-01-14T09:09:56.602Z","msg":"ws write goroutine start","func":"chat.(*Client).Write","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":95}
+{"level":"info","ts":"2026-01-14T09:09:56.603Z","msg":"ws read goroutine start","func":"chat.(*Client).Read","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":49}
+{"level":"error","ts":"2026-01-14T09:10:56.258Z","msg":"websocket: close 1006 (abnormal closure): unexpected EOF","func":"chat.(*Client).Read","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":54}
+{"level":"info","ts":"2026-01-14T09:10:57.265Z","msg":"ws连接成功","func":"chat.NewClientInit","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":132}
+{"level":"info","ts":"2026-01-14T09:10:57.265Z","msg":"ws read goroutine start","func":"chat.(*Client).Read","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":49}
+{"level":"info","ts":"2026-01-14T09:10:57.265Z","msg":"ws write goroutine start","func":"chat.(*Client).Write","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":95}
+{"level":"debug","ts":"2026-01-14T09:10:57.265Z","msg":"欢迎来到kama聊天服务器，亲爱的用户U2025123181073034246\n","func":"chat.(*Server).Start","file":"/root/gochat/KamaChat/internal/service/chat/server.go","line":79}
+{"level":"error","ts":"2026-01-14T09:11:43.200Z","msg":"websocket: close 1006 (abnormal closure): unexpected EOF","func":"chat.(*Client).Read","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":54}
+{"level":"info","ts":"2026-01-14T09:11:44.204Z","msg":"ws连接成功","func":"chat.NewClientInit","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":132}
+{"level":"info","ts":"2026-01-14T09:11:44.205Z","msg":"ws read goroutine start","func":"chat.(*Client).Read","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":49}
+{"level":"debug","ts":"2026-01-14T09:11:44.205Z","msg":"欢迎来到kama聊天服务器，亲爱的用户U2025123181073034246\n","func":"chat.(*Server).Start","file":"/root/gochat/KamaChat/internal/service/chat/server.go","line":79}
+{"level":"info","ts":"2026-01-14T09:11:44.206Z","msg":"ws write goroutine start","func":"chat.(*Client).Write","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":95}
+{"level":"error","ts":"2026-01-14T11:53:02.599Z","msg":"websocket: close 1001 (going away)","func":"chat.(*Client).Read","file":"/root/gochat/KamaChat/internal/service/chat/client.go","line":54}
