@@ -1,0 +1,52 @@
+[mainConfig]
+appName = "your app name"
+host = "0.0.0.0"
+port = 8000
+
+[mysqlConfig]
+host = "127.0.0.1"
+port = 3306
+user = "root"
+password = ""
+databaseName = "kama_chat_server"
+
+[redisConfig]
+host = "127.0.0.1"
+port = 6379
+password = ""
+db = 0
+
+[authCodeConfig]
+accessKeyID = "your accessKeyID in alibaba cloud"
+accessKeySecret = "your accessKeySecret in alibaba cloud"
+signName = "阿里云短信测试"
+templateCode = "SMS_154950909"
+
+[logConfig]
+logPath = "your log path"
+
+[kafkaConfig]
+messageMode = "channel"# 消息模式 channel or kafka
+hostPort = "127.0.0.1:9092" # "127.0.0.1:9092,127.0.0.1:9093,127.0.0.1:9094" 多个kafka服务器
+loginTopic = "login"
+chatTopic = "chat_message"
+logoutTopic = "logout"
+partition = 0 # kafka partition
+timeout = 1 # 单位秒
+
+[staticSrcConfig]
+staticAvatarPath = "./static/avatars"
+staticFilePath = "./static/files"
+
+[aiConfig]
+# AI Agent配置
+enabled = true 
+provider = "doubao" 
+apiKey = "2b0ecfa9-67d1-4b30-87d9-1eb6e7abea58" # 和curl里的密钥一致
+model = "doubao-seed-1-8-251228" # 必须填curl里能成功的模型名（小写+横杠+后缀）
+baseURL = "https://ark.cn-beijing.volces.com/api/v3" # 和curl里的地址一致
+systemPrompt = "你是KamaChat的智能助手AI，一个友好、专业的聊天机器人。你可以回答用户的问题、提供建议、进行闲聊。回复要简洁友好，符合即时通讯的对话风格。"
+maxTokens = 1000 # 最大生成token数
+temperature = 0.7 # 温度参数(0-1)
+streamEnabled = true # 是否启用流式返回
+contextLimit = 10 # 保留的上下文轮数

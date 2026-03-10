@@ -1,0 +1,37 @@
+# AI 微服务配置文件
+
+[server]
+host = "0.0.0.0"
+port = 9090
+# gRPC 最大接收消息大小（字节，默认 4MB）
+max_recv_msg_size = 4194304
+# gRPC 最大发送消息大小（字节，默认 4MB）
+max_send_msg_size = 4194304
+
+[ai]
+# 字节跳动火山方舟 API Key，生产环境请通过环境变量 ARK_API_KEY 注入
+api_key = "your-ark-api-key-here"
+# 豆包 / Doubao 模型 ID（在火山方舟控制台创建推理接入点后获取）
+model = "ep-20250101000000-xxxxx"
+# 火山方舟 API Base URL（默认值，通常不需要修改）
+base_url = "https://ark.cn-beijing.volces.com/api/v3"
+# 单次对话最大 token 数
+max_tokens = 2048
+# 对话温度（0.0 ~ 1.0，越高越随机）
+temperature = 0.7
+# 保留的对话历史轮数（每轮 = 1 条用户消息 + 1 条 AI 回复）
+max_history_turns = 10
+# 请求超时（秒）
+timeout_seconds = 30
+
+[log]
+# 日志输出级别：debug / info / warn / error
+level = "info"
+# 日志文件路径（留空则输出到 stdout）
+output_path = "logs/ai_service.log"
+# 单个日志文件最大大小（MB）
+max_size_mb = 100
+# 日志文件最多保留天数
+max_age_days = 7
+# 最多保留的旧日志文件数量
+max_backups = 3
